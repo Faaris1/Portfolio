@@ -1,0 +1,61 @@
+/* Tailwind via CDN handles resets; this file adds custom CSS without build tools */
+.container { max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+@media (min-width: 640px){ .container { padding-left: 1.5rem; padding-right: 1.5rem; }}
+@media (min-width: 1024px){ .container { padding-left: 2rem; padding-right: 2rem; }}
+
+.section { padding-top: 4rem; padding-bottom: 6rem; border-top: 1px solid rgba(229,231,235,0.6); }
+.dark .section { border-top-color: #1f2937; }
+.section:first-of-type { border-top: 0; }
+
+.section-title { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; }
+@media (min-width: 768px){ .section-title { font-size: 2.25rem; }}
+.section-text { margin-top: 1rem; color: #4b5563; }
+.dark .section-text { color: #d1d5db; }
+
+.card { border-radius: 0.75rem; border: 1px solid rgba(229,231,235,0.7); background: rgba(255,255,255,0.7); padding: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.dark .card { border-color: #1f2937; background: rgba(17,24,39,0.7); }
+.card-title { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem; }
+.skill-list { list-style: disc; padding-left: 1.25rem; color: #374151; }
+.skill-list li { margin: 0.25rem 0; }
+.dark .skill-list { color: #d1d5db; }
+
+.form-label { display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem; }
+.form-input { width: 100%; border: 1px solid #d1d5db; background: #fff; color: #111827; border-radius: 0.5rem; padding: 0.5rem 0.75rem; outline: none; }
+.form-input:focus { box-shadow: 0 0 0 2px rgba(37,99,235,0.35); border-color: #2563eb; }
+.dark .form-input { background: #111827; color: #e5e7eb; border-color: #374151; }
+
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #2563eb; color: #fff; font-weight: 600; border-radius: 0.5rem; padding: 0.625rem 1.25rem; box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+.btn-primary:hover { background: #1d4ed8; }
+
+.btn-secondary { display: inline-flex; align-items: center; justify-content: center; background: #111827; color: #fff; border-radius: 0.5rem; padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500; }
+.dark .btn-secondary { background: #e5e7eb; color: #111827; }
+
+.btn-tertiary { display: inline-flex; align-items: center; justify-content: center; border: 1px solid #d1d5db; border-radius: 0.5rem; padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500; }
+.btn-tertiary:hover { background: rgba(243,244,246,0.6); }
+.dark .btn-tertiary { border-color: #374151; }
+.dark .btn-tertiary:hover { background: #1f2937; }
+
+.nav-link { font-size: 0.875rem; font-weight: 500; color: #374151; }
+.nav-link:hover { color: #2563eb; }
+.dark .nav-link { color: #d1d5db; }
+.dark .nav-link:hover { color: #60a5fa; }
+
+.icon-link { display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 0.5rem; }
+.icon-link:hover { background: #f9fafb; }
+.dark .icon-link { border-color: #1f2937; }
+.dark .icon-link:hover { background: #1f2937; }
+
+.project-card { overflow: hidden; border-radius: 0.75rem; border: 1px solid #e5e7eb; background: rgba(255,255,255,0.7); box-shadow: 0 1px 2px rgba(0,0,0,0.04); transition: transform .25s ease; }
+.project-card:hover { transform: translateY(-4px); }
+.dark .project-card { border-color: #1f2937; background: rgba(17,24,39,0.7); }
+.project-image { width: 100%; height: 11rem; object-fit: cover; }
+
+/* Enhanced About section visuals */
+#about .card { position: relative; overflow: hidden; }
+#about .card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(600px 200px at 10% -10%, rgba(37,99,235,0.08), transparent 40%); }
+
+/* Simple reveal-on-scroll animation */
+.reveal { opacity: 0; transform: translateY(16px); transition: all 600ms ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+
